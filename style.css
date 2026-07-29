@@ -291,3 +291,25 @@ button:hover {
         transform: translateY(-8px);
     }
 }
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 25px;
+    animation: floatHeart 6s linear infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
