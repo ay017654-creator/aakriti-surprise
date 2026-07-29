@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -518,4 +519,114 @@ button:hover {
 
 #volume {
     width:120px;
+}
+<div class="panda-player">
+
+<div class="panda-face" id="panda">
+🐼🎧
+</div>
+
+<button onclick="toggleMusic()" id="musicBtn">
+▶️ Play
+</button>
+
+<input 
+type="range" 
+id="volume"
+min="0"
+max="1"
+step="0.1"
+value="0.5">
+
+<audio id="music" loop>
+<source src="music/song.wav" type="audio/wav">
+</audio>
+
+</div>
+
+<script src="script.js"></script>
+.open-letter-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff69b4, #ffb6c1);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(255,105,180,0.4);
+    transition: 0.3s;
+}
+
+.open-letter-btn:hover {
+    transform: scale(1.08);
+}
+.open-letter-btn {
+
+    display: block;
+    width: fit-content;
+
+    margin: 30px auto;
+
+    padding: 16px 35px;
+
+    background: linear-gradient(45deg, #ff4fa3, #ff9acb);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    border-radius: 40px;
+
+    border: 3px solid white;
+
+    box-shadow:
+    0 0 10px #ff4fa3,
+    0 0 25px #ff4fa3,
+    0 0 40px #ff9acb;
+
+    animation: letterGlow 2s infinite;
+
+    transition: 0.3s;
+
+}
+
+
+.open-letter-btn:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+@keyframes letterGlow {
+
+    0% {
+
+        box-shadow:
+        0 0 10px #ff4fa3;
+
+    }
+
+    50% {
+
+        box-shadow:
+        0 0 30px #ff4fa3,
+        0 0 50px #ff9acb;
+
+    }
+
+    100% {
+
+        box-shadow:
+        0 0 10px #ff4fa3;
+
+    }
+
 }

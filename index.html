@@ -1,92 +1,114 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta charset="UTF-8">
-<title>A Special Surprise For Aakriti ❤️</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aakriti Sister Surprise 🐼💖</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<div class="floating">❤️ 🌸 ✨ 🦋 🧸</div>
 
-<div class="card">
+<div class="container">
 
-<div class="panda">
-🐼
-</div>
-
-<div class="toy">
-🧸
-</div>
 
 <h1>
-✨ A Little Surprise ✨
+🌸 A Special Surprise 🌸
 </h1>
 
+
 <h2>
-For Aakriti ❤️
+Dear Aakriti Sister ❤️
 </h2>
 
+
+<div class="panda">
+🐼🎀
+</div>
+
+
 <p>
-A cute little world made with love,
-happiness and smiles 🌸
+Welcome to your little surprise world ✨
 </p>
 
-<div class="gift" onclick="openGift()">
-🎁
-</div>
 
-<button onclick="openGift()">
-Open The Gift 💝
-</button>
+<!-- Panda Music Player -->
 
-<p id="message"></p>
+<div class="panda-player">
 
-</div>
-<audio id="bgMusic" loop>
-    <source src="music/song.wav" type="audio/wav">
-</audio>
-<div class="panda-player" onclick="playMusic()">
-
-    <div class="music-panda">
+    <div class="music-panda" id="panda">
         🐼🎧
     </div>
 
-    <span id="musicText">
-        Play Music 🎵
-    </span>
+    <button onclick="toggleMusic()" id="musicBtn">
+        ▶️ Play Music
+    </button>
+
+    <br><br>
+
+    <input 
+    type="range"
+    id="volume"
+    min="0"
+    max="1"
+    step="0.1"
+    value="0.5">
+
+
+    <audio id="music" loop>
+
+        <source src="music/song.wav" type="audio/wav">
+
+    </audio>
+
 
 </div>
+
+
+
+<!-- Open Letter Button -->
+
+<a href="letter.html" class="open-letter-btn">
+
+💌 Open Panda Letter
+
+</a>
+
+
+
+<!-- Extra pages -->
+
+<a href="garden.html" class="open-letter-btn">
+
+🌸 Visit Magic Garden
+
+</a>
+
+
+
+<a href="panda-house.html" class="open-letter-btn">
+
+🏠 Visit Panda House
+
+</a>
+
+
+
+</div>
+
+
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
-<br><br>
-
-<a href="letter.html" class="secret">
-💌 Open Panda Letter
-</a>
-<div class="panda-player">
-
-<div class="panda-face" id="panda">
-🐼🎧
-</div>
-
-<button onclick="toggleMusic()" id="musicBtn">
-▶️ Play
-</button>
-
-<input 
-type="range" 
-id="volume" 
-min="0" 
-max="1" 
-step="0.1" 
-value="0.5">
-
-<audio id="music" loop>
-<source src="music/song.wav" type="audio/wav">
-</audio>
-
-</div>

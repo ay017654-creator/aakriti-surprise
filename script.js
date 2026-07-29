@@ -30,29 +30,27 @@ function openGift(){
         },3000);
     }
 }
-function playMusic(){
-
-    let music = document.getElementById("bgMusic");
-
-    music.play();
-
-}
-function playMusic(){
+function playMusic() {
 
     let music = document.getElementById("bgMusic");
     let text = document.getElementById("musicText");
+    let panda = document.getElementById("panda");
 
-    if(music.paused){
+    if (music.paused) {
 
         music.play();
-        text.innerHTML = "Panda is singing 🎶🐼";
+        text.innerHTML = "⏸ Pause Music";
+        panda.classList.add("playing");
 
     } else {
 
         music.pause();
-        text.innerHTML = "Play Music 🎵";
+        text.innerHTML = "▶️ Play Music";
+        panda.classList.remove("playing");
 
     }
+
+}
 
 }
 let text = "This is a small message from my heart ✨\n\nYou bring happiness and smiles. Always stay kind, keep dreaming, and never stop shining 🌟\n\nKeep smiling always 🐼🌸";
@@ -155,5 +153,38 @@ panda.classList.remove("playing");
 document.getElementById("volume").oninput=function(){
 
 music.volume=this.value;
+
+}
+// Panda Music Player
+const music = document.getElementById("bgMusic");
+const musicText = document.getElementById("musicText");
+const panda = document.getElementById("panda");
+const volume = document.getElementById("volume");
+
+function playMusic() {
+
+    if (!music) return;
+
+    if (music.paused) {
+
+        music.play();
+        if (musicText) musicText.innerHTML = "⏸ Pause Music";
+        if (panda) panda.classList.add("playing");
+
+    } else {
+
+        music.pause();
+        if (musicText) musicText.innerHTML = "▶️ Play Music";
+        if (panda) panda.classList.remove("playing");
+
+    }
+
+}
+
+if (volume && music) {
+
+    volume.addEventListener("input", function () {
+        music.volume = this.value;
+    });
 
 }
