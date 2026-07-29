@@ -30,3 +30,10 @@ function openGift(){
         },3000);
     }
 }
+function playMusic(){
+
+    let music = document.getElementById("bgMusic");
+
+    music.play();
+
+}
