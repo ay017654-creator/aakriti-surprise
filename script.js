@@ -37,3 +37,21 @@ function playMusic(){
     music.play();
 
 }
+function playMusic(){
+
+    let music = document.getElementById("bgMusic");
+    let text = document.getElementById("musicText");
+
+    if(music.paused){
+
+        music.play();
+        text.innerHTML = "Panda is singing 🎶🐼";
+
+    } else {
+
+        music.pause();
+        text.innerHTML = "Play Music 🎵";
+
+    }
+
+}

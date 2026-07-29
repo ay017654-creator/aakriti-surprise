@@ -261,3 +261,33 @@ button:hover {
         transform:scale(1);
     }
 }
+.panda-player {
+    margin: 20px auto;
+    width: 220px;
+    padding: 15px;
+    background: linear-gradient(45deg,#ff9acb,#c9b6ff);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    animation: playerFloat 2s infinite;
+}
+
+.music-panda {
+    font-size: 45px;
+}
+
+#musicText {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.panda-player:active {
+    transform: scale(0.9);
+}
+
+@keyframes playerFloat {
+    50% {
+        transform: translateY(-8px);
+    }
+}
