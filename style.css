@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffb6d9, #c9b6ff, #a8edea);
+    font-family: "Comic Sans MS", cursive;
+    overflow: hidden;
+}
+
+.card {
+    width: 350px;
+    padding: 35px;
+    text-align: center;
+    background: rgba(255,255,255,0.55);
+    border-radius: 35px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    backdrop-filter: blur(15px);
+    animation: appear 1.5s ease;
+}
+
+.panda {
+    font-size: 90px;
+    animation: pandaMove 2s infinite;
+}
+
+.toy {
+    font-size: 50px;
+    animation: bounce 1.5s infinite;
+}
+
+h1 {
+    color: #ff4081;
+    font-size: 30px;
+}
+
+h2 {
+    color: #8e44ad;
+}
+
+p {
+    color: #5d005d;
+    font-size: 18px;
+}
+
+.gift {
+    font-size: 70px;
+    cursor: pointer;
+    animation: shake 2s infinite;
+}
+
+button {
+    margin-top: 15px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 17px;
+    background: linear-gradient(45deg,#ff4081,#8e44ff);
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.floating {
+    position: absolute;
+    top: 20px;
+    font-size: 30px;
+    animation: float 3s infinite;
+}
+
+
+@keyframes pandaMove {
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes shake {
+    0%,100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity:0;
+        transform:scale(0.5);
+    }
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+}
+.open {
+    animation: openGift 0.8s;
+}
+
+.heart {
+    position: absolute;
+    bottom: 0;
+    font-size: 25px;
+    animation: fly 3s linear;
+}
+
+@keyframes openGift {
+
+    50% {
+        transform: scale(1.5) rotate(15deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fly {
+
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-90vh);
+        opacity: 0;
+    }
+}
+.letter-card {
+    animation: letterOpen 1.5s ease;
+}
+
+.panda-letter {
+    font-size: 90px;
+    animation: pandaBounce 2s infinite;
+}
+
+.letter {
+    background: rgba(255,255,255,0.7);
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 15px;
+    animation: glow 2s infinite;
+}
+
+@keyframes pandaBounce {
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes letterOpen {
+    from {
+        opacity:0;
+        transform: rotateY(90deg);
+    }
+    to {
+        opacity:1;
+        transform: rotateY(0);
+    }
+}
+
+@keyframes glow {
+    50% {
+        box-shadow: 0 0 20px pink;
+    }
+}
+.secret {
+    color: #ff4081;
+    text-decoration: none;
+    font-size: 18px;
+}
+.house {
+    font-size: 90px;
+    animation: houseMove 3s infinite;
+}
+
+.panda-house {
+    font-size: 80px;
+    animation: pandaDance 2s infinite;
+}
+
+.toys {
+    font-size: 35px;
+    margin: 20px;
+    animation: sparkle 2s infinite;
+}
+
+@keyframes houseMove {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pandaDance {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes sparkle {
+    50% {
+        transform: scale(1.2);
+    }
+}
+.garden-items {
+    font-size: 35px;
+    animation: gardenMove 3s infinite;
+}
+
+.panda-garden {
+    font-size: 90px;
+    animation: pandaWave 2s infinite;
+}
+
+.garden-card {
+    animation: gardenOpen 2s ease;
+}
+
+@keyframes gardenMove {
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pandaWave {
+    50% {
+        transform: rotate(8deg);
+    }
+}
+
+@keyframes gardenOpen {
+    from {
+        opacity:0;
+        transform:scale(0.5);
+    }
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+}

@@ -1,0 +1,32 @@
+function openGift(){
+
+    let gift = document.querySelector(".gift");
+
+    gift.innerHTML = "💖";
+    gift.classList.add("open");
+
+    document.getElementById("message").innerHTML =
+    "🎉 Surprise Opened! 🎉<br><br>" +
+    "Dear Aakriti ❤️<br>" +
+    "This little panda gift is made with love 🌸<br>" +
+    "Always keep smiling 🐼✨";
+
+
+    for(let i = 0; i < 15; i++){
+
+        let heart = document.createElement("div");
+
+        heart.innerHTML = ["❤️","✨","🌸","💖"][Math.floor(Math.random()*4)];
+
+        heart.className = "heart";
+
+        heart.style.left = Math.random()*100 + "vw";
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(()=>{
+            heart.remove();
+        },3000);
+    }
+}
