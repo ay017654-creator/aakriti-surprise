@@ -188,3 +188,31 @@ if (volume && music) {
     });
 
 }
+let message = 
+`This is a small message from my heart ✨
+
+You bring happiness and smiles.
+Always stay kind, keep dreaming,
+and never stop shining 🌟
+
+Keep smiling always 🐼🌸`;
+
+let index = 0;
+
+function typeLetter(){
+
+    let typing = document.getElementById("typing");
+
+    if(typing && index < message.length){
+
+        typing.innerHTML += message.charAt(index);
+
+        index++;
+
+        setTimeout(typeLetter, 60);
+
+    }
+
+}
+
+typeLetter();
