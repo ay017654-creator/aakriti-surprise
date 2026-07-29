@@ -73,3 +73,52 @@ function typingEffect() {
 }
 
 window.onload = typingEffect;
+function createStar(){
+
+    let star = document.createElement("div");
+
+    star.className = "star";
+    star.innerHTML = "⭐";
+
+    star.style.left = Math.random()*100 + "vw";
+    star.style.top = Math.random()*80 + "vh";
+
+    document.body.appendChild(star);
+
+}
+
+for(let i=0;i<20;i++){
+    createStar();
+}
+
+
+function createCloud(){
+
+    let cloud = document.createElement("div");
+
+    cloud.className="cloud";
+    cloud.innerHTML="☁️";
+
+    cloud.style.top=Math.random()*50+"vh";
+
+    document.body.appendChild(cloud);
+
+}
+
+setInterval(createCloud,5000);
+function createButterfly(){
+
+let b=document.createElement("div");
+
+b.className="butterfly";
+b.innerHTML="🦋";
+
+document.body.appendChild(b);
+
+setTimeout(()=>{
+b.remove();
+},8000);
+
+}
+
+setInterval(createButterfly,4000);

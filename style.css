@@ -313,3 +313,65 @@ button:hover {
     }
 
 }
+.star {
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    animation: twinkle 2s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+
+.cloud {
+    position: fixed;
+    font-size: 50px;
+    animation: moveCloud 15s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes moveCloud {
+
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 100%;
+    }
+
+}
+.butterfly {
+    position: fixed;
+    font-size: 30px;
+    animation: fly 8s linear infinite;
+}
+
+@keyframes fly {
+
+    0% {
+        left:-50px;
+        top:70%;
+    }
+
+    50% {
+        top:30%;
+    }
+
+    100% {
+        left:100%;
+        top:60%;
+    }
+
+}
