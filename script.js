@@ -55,3 +55,21 @@ function playMusic(){
     }
 
 }
+let text = "This is a small message from my heart ✨\n\nYou bring happiness and smiles. Always stay kind, keep dreaming, and never stop shining 🌟\n\nKeep smiling always 🐼🌸";
+
+let i = 0;
+
+function typingEffect() {
+
+    if (i < text.length) {
+
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+
+        setTimeout(typingEffect, 80);
+
+    }
+
+}
+
+window.onload = typingEffect;
