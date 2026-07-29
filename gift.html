@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Secret Gift 🎁</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Secret Gift 🎁</h1>
+
+<div class="gift-box" onclick="openGift()">
+🎁
+</div>
+
+<p id="giftText">
+Tap the gift box 🐼✨
+</p>
+
+</div>
+
+<script>
+
+function openGift(){
+
+let box = document.querySelector(".gift-box");
+
+box.innerHTML="🎉💖";
+
+document.getElementById("giftText").innerHTML =
+"Surprise! A special gift for Aakriti Sister 🌸🐼";
+
+}
+
+</script>
+
+</body>
+
+</html>

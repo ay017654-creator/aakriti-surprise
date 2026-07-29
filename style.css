@@ -375,3 +375,24 @@ button:hover {
     }
 
 }
+.gift-box {
+    font-size: 90px;
+    cursor: pointer;
+    animation: bounceGift 2s infinite;
+}
+
+@keyframes bounceGift {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+}
+
+.gift-box:active {
+    transform: scale(1.2);
+}
