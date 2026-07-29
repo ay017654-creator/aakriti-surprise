@@ -471,3 +471,51 @@ button:hover {
     }
 
 }
+.panda-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.7);
+    padding: 15px;
+    border-radius: 25px;
+    text-align:center;
+    backdrop-filter: blur(10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+.panda-face {
+    font-size:50px;
+    transition:0.3s;
+}
+
+
+.playing {
+    animation: pandaDance 1s infinite;
+}
+
+
+@keyframes pandaDance {
+
+    50% {
+        transform: rotate(10deg) scale(1.1);
+    }
+
+}
+
+
+.panda-player button {
+
+    border:none;
+    border-radius:20px;
+    padding:8px 18px;
+    background:#ff6fae;
+    color:white;
+    cursor:pointer;
+
+}
+
+
+#volume {
+    width:120px;
+}

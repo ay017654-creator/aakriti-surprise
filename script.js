@@ -122,3 +122,38 @@ b.remove();
 }
 
 setInterval(createButterfly,4000);
+let music = document.getElementById("music");
+let panda = document.getElementById("panda");
+let btn = document.getElementById("musicBtn");
+
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+btn.innerHTML="⏸ Pause";
+
+panda.classList.add("playing");
+
+}
+
+else{
+
+music.pause();
+
+btn.innerHTML="▶️ Play";
+
+panda.classList.remove("playing");
+
+}
+
+}
+
+
+document.getElementById("volume").oninput=function(){
+
+music.volume=this.value;
+
+}
