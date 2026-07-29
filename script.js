@@ -188,7 +188,13 @@ if (volume && music) {
     });
 
 }
-let message = 
+window.addEventListener("load", function () {
+
+    let typing = document.getElementById("typing");
+
+    if (typing) {
+
+        let message =
 `This is a small message from my heart ✨
 
 You bring happiness and smiles.
@@ -197,22 +203,28 @@ and never stop shining 🌟
 
 Keep smiling always 🐼🌸`;
 
-let index = 0;
+        let index = 0;
 
-function typeLetter(){
+        function typeLetter() {
 
-    let typing = document.getElementById("typing");
+            if (index < message.length) {
 
-    if(typing && index < message.length){
+                if (message.charAt(index) === "\n") {
+                    typing.innerHTML += "<br>";
+                } else {
+                    typing.innerHTML += message.charAt(index);
+                }
 
-        typing.innerHTML += message.charAt(index);
+                index++;
 
-        index++;
+                setTimeout(typeLetter, 60);
 
-        setTimeout(typeLetter, 60);
+            }
+
+        }
+
+        typeLetter();
 
     }
 
-}
-
-typeLetter();
+});
